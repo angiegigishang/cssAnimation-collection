@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.pic1, .pic2, .pic3 {
+			position: absolute;
+			margin-left: 50%;
+			margin-top: 20%;
+			width: 200px;
+			height: 200px;
+			border: 4px solid white;
+			transition: transform .7s ease;
+		}
+		.pic1 {
+			background-color: pink;
+			transform: rotate(15deg);
+		}
+		div:hover.pic1{
+			transform: rotate(40deg);
+		}
+		.pic2 {
+			background-color: lightblue;		
+		}
+		.pic3 {
+			background-color: orange;
+			transform: rotate(-15deg);
+		}
+		div:hover.pic3{
+			transform: rotate(-40deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="pic1"></div>
+	<div class="pic2"></div>
+	<div class="pic3"></div>
+
+</body>
+</html>
