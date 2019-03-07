@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		body {
+			background: grey;
+		}
+		.book {
+			position: relative;
+			width: 400px;
+			height: 700px;
+			background: white;
+		}
+		.page1, .page2, .page3 {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 400px;
+			height: 700px;
+		}
+		.page1 {
+			background: pink;
+		}
+		.page2 {
+			background: lightblue;
+		}
+		.page3 {
+			background: orange;
+		}
+		.page3:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			border-style: solid;
+			border-width: 0px;
+			border-color: rgba(0,0,0,0.2) #fff;
+			border-radius: 0 0 0 6px;
+			box-shadow:  0 2px 2px rgba(0,0,0,0.6), -2px 2px 2px rgba(0,0,0,0.4);
+			-webkit-transition: all 0.8s ease-out;
+		    transition:all 0.8s ease-out;
+		}
+		.page3:hover:before {
+			border-right-width:100px;
+		    border-top-width:100px;
+		}
+		.skip {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="book" id="pages">
+		<div class="page1" id="page">page1</div>
+		<div class="page2" id="page">page2</div>
+		<div class="page3" id="page">page3</div>
+	</div>
+	<script type="text/javascript">
+		document.getElementById('pages').addEventListener("click", function(e){
+				e.target.className += " skip"
+		})
+	</script>
+</body>
+</html>
